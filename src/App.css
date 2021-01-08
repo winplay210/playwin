@@ -78,3 +78,10 @@
   .mll-20{
     margin-left: 20px;
   }
+
+  .ant-input:hover{
+    border-color: #6842bc;
+  }
+  .ant-input:focus, .ant-input-focused{
+    border-color: #6842bc;
+  }
