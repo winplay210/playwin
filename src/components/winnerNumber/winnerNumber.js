@@ -14,15 +14,16 @@ const WinnerNumber=(props)=> {
           span: 8,
         },
         wrapperCol: {
-          span: 16,
+          span: 10,
         },
       };
       const tailLayout = {
         wrapperCol: {
-          offset: 8,
+          offset: 11,
           span: 16,
         },
       };
+     
 
   
   const onFinish = (values) => {
@@ -51,8 +52,13 @@ const WinnerNumber=(props)=> {
   }
   
  return (
-      <div style={{marginTop:"50px"}}>
+  <div className='container'>
+  <div className='MainCont'> 
+
+  <h1 className='title'> Winner Number</h1>
+  <hr/>
     <Form
+    style={{marginTop:"40px"}}
       {...layout}
       name="basic"
       initialValues={{
@@ -71,11 +77,11 @@ const WinnerNumber=(props)=> {
           },
         ]}
       >
-        <Input style={{width:"30%"}} />
+        <Input  />
       </Form.Item>
 
       <Form.Item
-        label="date"
+        label="Date"
         name="date"
         rules={[
           {
@@ -84,18 +90,17 @@ const WinnerNumber=(props)=> {
           },
         ]}
       >
-        <DatePicker/>
+        <DatePicker style={{width:"100%"}}/>
       </Form.Item>
       <Form.Item {...tailLayout}>
         <Button type="primary" htmlType="submit">
           Submit
         </Button>
+        <Button onClick={onLogoutClick} className='mll-20'  type='primary'>Logout</Button>
       </Form.Item>
 
-      <Form.Item {...tailLayout}>
-        <Button onClick={onLogoutClick} type='primary'>Logout</Button>
-      </Form.Item>
     </Form>
+    </div>
     </div>
   )
 

@@ -1,13 +1,8 @@
 import React, { useState,useEffect } from "react";
 import axios from 'axios';
-const mystyle = {
-    color: "black",
-    backgroundColor: "white",
-    padding: "10px",
-    fontFamily: "Arial",
-    textAlign: "center",
-    marginTop:"90px"
-  };
+import style from './assets/css/home.module.css';
+import mainImg from './assets/img/lucky.gif';
+
 const Home=()=>{
 
     let [number,setNumber]=useState(0),
@@ -33,15 +28,22 @@ const Home=()=>{
     },[])
 
     return(
-        <div>
-        <h1 style={{textAlign:"center",marginTop:"40px"}}>Draw Lucky 3</h1>
-        <div style={mystyle}>
+        <div className='container'>
+              <div className={style.MainCont}>
+        <h1 className={style.title}>Lucky Draw 3</h1>
+        <hr/>
+
+        <div className={style.Imgdiv}>
+            <img className={style.ImgStyle} src={mainImg} alt='LuckyDraw'/>
+        </div>
+        <div className={style.divStyles}>
           
-        <h4>Today Winner of Dubai Lucky draw </h4>
-            <h1 >{number}</h1>
-            <h4>{date}</h4>
+        <h4 className={style.SubTitle}>Today Winner of Dubai Lucky draw </h4>
+            <h1 className={style.Number}>{number}</h1>
+            <h4 className={style.DateLabel}>{date? date: '08 January,2021'}</h4>
         </div>
 
+        </div>
         </div>
          
     )

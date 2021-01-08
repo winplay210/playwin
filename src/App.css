@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+  background-image: url('./assets/image/bgfinal.png');
+  background-repeat: repeat;
+  height: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ant-spin-dot-item{
+  background-color: #6842bc;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused{
+  border-color: #6842bc;
+}
+.ant-input-affix-wrapper:hover{
+  border-color: #6842bc;
+}
+.ant-picker-focused{
+  border-color: #6842bc;
+  width: 100%;
+}
+.ant-picker:hover, .ant-picker-focused{
+  border-color: #6842bc;
+}
+.ant-form-item-label > label {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 32px;
+  color: rgb(104 66 188);
+  font-size: 14px;
+  font-weight: 550;
 }
 
-.App-link {
-  color: #61dafb;
+
+.ant-btn-primary{
+  background: #f75f91;
+  cursor: pointer;
+  border: 1px solid #f75f91;
+}
+.ant-btn-primary:hover{
+  opacity: 0.9;
+  background:#c35076;
+  border: 1px solid #c35076;
+}
+.ant-btn-primary:focus{
+  background:   #c35076;
+  opacity: 0.9;
+  border: 1px solid #c35076;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #f75f91;
+  border-color:#c35076;
 }
+
+.MainCont{
+  background: white;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.0.16);
+  border: 1px solid #bababa;
+  padding: 10px;
+  min-height: 85vh;
+
+
+}
+.title{
+  text-align: center;
+  color: #333333;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 22px;
+  }
+  .title:hover{
+      color:#6842bc
+  }
+  .mll-20{
+    margin-left: 20px;
+  }

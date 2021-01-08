@@ -3,19 +3,19 @@ import {Form,Button} from "antd";
 import axios from 'axios'
 import {withRouter} from 'react-router-dom';
 import {Input, Checkbox } from 'antd';
-
+import style from './chg.module.css';
 const ChangePass=(props)=> {
   const layout = {
     labelCol: {
       span: 8,
     },
     wrapperCol: {
-      span: 16,
+      span: 10,
     },
   };
   const tailLayout = {
     wrapperCol: {
-      offset: 8,
+      offset: 12,
       span: 16,
     },
   };
@@ -52,9 +52,16 @@ const ChangePass=(props)=> {
 
   
     return (
-      <Form
-      style={{marginTop:"40px"}}
-        {...layout}
+    <div className='container'>
+      <div className={style.MainCont}> 
+
+      <h1 className={style.title}>Change Password</h1>
+        <hr/>
+      
+  
+        <Form
+         style={{marginTop:"40px"}}
+      {...layout}
         name="basic"
         initialValues={{
           remember: true,
@@ -62,8 +69,9 @@ const ChangePass=(props)=> {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
+
         <Form.Item
-          label="Old Password"
+         label="Old Password"
           name="old"
           rules={[
             {
@@ -72,7 +80,7 @@ const ChangePass=(props)=> {
             },
           ]}
         >
-          <Input.Password style={{width:"40%"}} />
+          <Input.Password />
         </Form.Item>
   
         <Form.Item
@@ -85,7 +93,7 @@ const ChangePass=(props)=> {
             },
           ]}
         >
-          <Input.Password  style={{width:"40%"}} />
+          <Input.Password   />
         </Form.Item>
   
         <Form.Item
@@ -98,16 +106,22 @@ const ChangePass=(props)=> {
             },
           ]}
         >
-          <Input.Password  style={{width:"40%"}} />
+          <Input.Password  />
         </Form.Item>
   
   
         <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit">
+      
+         <Button type="primary" className={style.BgPrimary} htmlType="submit">
             Change
           </Button>
+        
         </Form.Item>
       </Form>
+       
+  
+    </div>
+    </div>
     );
   
 }

@@ -1,0 +1,54 @@
+.MainCont{
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.0.16);
+    border: 1px solid #bababa;
+    padding: 10px;
+    min-height: 85vh;
+
+}
+
+.title{
+text-align: center;
+color: #333333;
+cursor: pointer;
+font-weight: bold;
+font-size: 26px;
+}
+.title:hover{
+    color:#6842bc
+}
+.divStyles{
+    font-family: 'Arial';
+    text-align: center;
+    margin-top:30px
+}
+.Imgdiv{
+    text-align: center;
+}
+
+.ImgStyle{
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.SubTitle{
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.SubTitle:hover ,.Number:hover, .DateLabel:hover{
+    opacity: 0.9;
+}
+.Number{
+    color: #f75f91;
+    font-weight: 500;
+    cursor: pointer;
+}
+.DateLabel{
+    font-size: 18px;
+    color: #737070;
+    cursor: pointer;
+}

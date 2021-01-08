@@ -10,15 +10,24 @@ const Login=(props)=> {
       span: 8,
     },
     wrapperCol: {
-      span: 16,
+      span: 10,
     },
   };
   const tailLayout = {
     wrapperCol: {
+      offset: 12,
+      span: 16,
+    },
+    
+  };
+  const checkLayout = {
+    wrapperCol: {
       offset: 8,
       span: 16,
     },
+    
   };
+  
   
 
   const onFinish = (values) => {
@@ -51,7 +60,12 @@ const Login=(props)=> {
     const [isLoading,setLoading]=useState(false);
   
     return (
-      <div>
+      <div className='container'>
+        <div className='MainCont'> 
+
+        <h1 className='title'> Admin Login</h1>
+        <hr/>
+
       {
         !isLoading?
       <Form
@@ -74,7 +88,7 @@ const Login=(props)=> {
             },
           ]}
         >
-          <Input style={{width:"40%"}} />
+          <Input  />
         </Form.Item>
   
         <Form.Item
@@ -87,10 +101,10 @@ const Login=(props)=> {
             },
           ]}
         >
-          <Input.Password  style={{width:"40%"}} />
+          <Input.Password   />
         </Form.Item>
   
-        <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+        <Form.Item {...checkLayout} name="remember" valuePropName="checked">
           <Checkbox>Remember me</Checkbox>
         </Form.Item>
   
@@ -99,8 +113,9 @@ const Login=(props)=> {
             Submit
           </Button>
         </Form.Item>
-      </Form>:<Spin style={{marginTop:"150px",marginLeft:"650px"}}  size="large"/>
+      </Form>:<Spin size="large"/>
         }
+        </div>
         </div>
     );
   

@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar/navbar"
 import ChangePass from "../components/changePass/changePass"
 
 import WinnerNumber from './winnerNumber/winnerNumber';
+import '../App.css';
 //routes
 
 const Routes = () => {
