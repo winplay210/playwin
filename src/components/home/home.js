@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import axios from 'axios';
+import {Divider} from 'antd';
 import style from './assets/css/home.module.css';
 import mainImg from './assets/img/lucky.gif';
 
@@ -39,8 +40,8 @@ const Home=()=>{
         <div className={style.divStyles}>
           
         <h4 className={style.SubTitle}>Today Winner of Dubai Lucky draw </h4>
-            <h1 className={style.Number}>{number}</h1>
-            <h4 className={style.DateLabel}>{date? date: '08 January,2021'}</h4>
+            <h1 className={style.Number}>{number?number:'0003456'}</h1>
+            <h4 className={style.DateLabel}>{date? date: '08 January,2021'} <Divider type="vertical" /> {date? date: '4:47 PM'} </h4>
         </div>
 
         </div>

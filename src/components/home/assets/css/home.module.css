@@ -28,12 +28,22 @@ font-size: 26px;
     text-align: center;
 }
 
-.ImgStyle{
-    height: 250px;
-    object-fit: cover;
-    cursor: pointer;
+@media only screen and (max-width:560px){
+    .ImgStyle{
+        height: 150px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
 }
-
+@media only screen and (min-width:561px){
+    .ImgStyle{
+        height: 250px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
+}
 .SubTitle{
     font-size: 20px;
     font-weight: bold;
@@ -46,7 +56,13 @@ font-size: 26px;
     color: #f75f91;
     font-weight: 500;
     cursor: pointer;
+    animation: blink 1s linear infinite;
 }
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
 .DateLabel{
     font-size: 18px;
     color: #737070;

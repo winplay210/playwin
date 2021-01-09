@@ -8,22 +8,14 @@ import { withRouter } from 'react-router-dom';
 
 
 const WinnerNumber=(props)=> {
-  console.log("Props",props)
-    const layout = {
-        labelCol: {
-          span: 8,
-        },
-        wrapperCol: {
-          span: 10,
-        },
-      };
-      const tailLayout = {
-        wrapperCol: {
-          offset: 11,
-          span: 16,
-        },
-      };
-     
+  console.log("Props",props);
+  const layout = {
+    labelCol: { span: 6 },
+    wrapperCol: { span: 14 },
+  };
+  const tailLayout = {
+    wrapperCol: { offset: 6, span: 16 },
+  };
 
   
   const onFinish = (values) => {
@@ -57,9 +49,10 @@ const WinnerNumber=(props)=> {
 
   <h1 className='title'> Winner Number</h1>
   <hr/>
-    <Form
+   
+     <Form
+    {...layout}
     style={{marginTop:"40px"}}
-      {...layout}
       name="basic"
       initialValues={{
         remember: true,
@@ -92,14 +85,19 @@ const WinnerNumber=(props)=> {
       >
         <DatePicker style={{width:"100%"}}/>
       </Form.Item>
+
+      
       <Form.Item {...tailLayout}>
-        <Button type="primary" htmlType="submit">
+
+        <Button type="primary" htmlType="submit" className='DefBtn'>
           Submit
         </Button>
-        <Button onClick={onLogoutClick} className='mll-20'  type='primary'>Logout</Button>
-      </Form.Item>
+  
+        <Button onClick={onLogoutClick}  type='primary'  className='DefBtn'>Logout</Button>
+        </Form.Item>
 
     </Form>
+     
     </div>
     </div>
   )

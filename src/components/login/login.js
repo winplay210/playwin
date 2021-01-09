@@ -7,23 +7,23 @@ import {Input, Checkbox,Spin } from 'antd';
 const Login=(props)=> {
   const layout = {
     labelCol: {
-      span: 8,
+      span: 6,
     },
     wrapperCol: {
-      span: 10,
+      span: 14,
     },
   };
   const tailLayout = {
     wrapperCol: {
-      offset: 12,
-      span: 16,
+      offset: 6,
+      span: 14,
     },
     
   };
   const checkLayout = {
     wrapperCol: {
-      offset: 8,
-      span: 16,
+      offset: 6,
+      span: 14,
     },
     
   };
@@ -113,7 +113,7 @@ const Login=(props)=> {
             Submit
           </Button>
         </Form.Item>
-      </Form>:<Spin size="large"/>
+      </Form>:<div className='text-center'> <Spin size="large" className='mtt-20'/> </div>
         }
         </div>
         </div>

@@ -7,16 +7,16 @@ import style from './chg.module.css';
 const ChangePass=(props)=> {
   const layout = {
     labelCol: {
-      span: 8,
+      span: 6,
     },
     wrapperCol: {
-      span: 10,
+      span: 14,
     },
   };
   const tailLayout = {
     wrapperCol: {
-      offset: 12,
-      span: 16,
+      offset: 6,
+      span: 14,
     },
   };
   

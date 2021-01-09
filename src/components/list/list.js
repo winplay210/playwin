@@ -1,7 +1,22 @@
 import React,{useEffect,useState} from 'react';
-import { List, Avatar } from 'antd'
 import axios from 'axios';
-import { Button,Spin } from 'antd';
+import { Button,Spin,List } from 'antd';
+
+const dataList = [
+  {
+    title: '0003456',
+  },
+  {
+    title: '0003456',
+  },
+  {
+    title: '0003456',
+  },
+  {
+    title: '0003456',
+  },
+  
+];
 
 const ListWinners=()=>{
 
@@ -72,9 +87,12 @@ const ListWinners=()=>{
    }
     
       return(
-          <div style={{alignContent:"center"}}>
+          <div className='container'>
+             <div className='MainCont'>
+             <h1 className='title'> Winner List </h1>
+              <hr/>
              {  !isLoading?
-             <div>
+             <div >
                 <List
                 itemLayout="horizontal"
                 dataSource={data}
@@ -84,19 +102,22 @@ const ListWinners=()=>{
                   
                   <List.Item>
                     <List.Item.Meta
-                      title={<h4 href="https://ant.design">{item.number}</h4>}
-                      description={item.date}
+                      title={<h4 href="https://ant.design">{item.number?item.number:'0003456'}</h4>}
+                      description={item.date?item.date:'09 January, 2020 | 4:49 PM' }
                     />
                   </List.Item>
                 
                 )}
                 
                 />
-          
-                <Button onClick={()=>seeMore("Hey")}style={{marginLeft:"40%",backgroundColor:"blue",color:"white"}}>See More</Button>
-                </div>:<Spin style={{marginLeft:"650px",marginTop:"90px"}} size='large'/>
+          <div className='text-center'>
+                <Button onClick={()=>seeMore("Hey")} type='primary'>See More</Button>
+                </div>
+                </div>: <div className='text-center'> 
+                <Spin className='mtt-20' size='large'/> 
+                </div>
              }
-     
+     </div>
       </div>
       )
 }
