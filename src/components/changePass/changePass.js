@@ -32,7 +32,7 @@ const ChangePass=(props)=> {
       return;
     }
         if(values.password==values.confirm){
-            axios.post( "http://localhost:4001/update", {
+            axios.post( "http://playwinbackend.herokuapp.com/update", {
                 email:'admin',
                 old:values.old,
                 password:values.password,

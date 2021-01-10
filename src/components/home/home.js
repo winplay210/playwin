@@ -10,7 +10,7 @@ const Home=()=>{
     [date,setDate]=useState('');
 
     useEffect(()=>{
-        axios.get('http://localhost:4001/history/'+0).then(result=>{
+        axios.get('http://playwinbackend.herokuapp.com/history/'+0).then(result=>{
                 if(result){
                     setNumber(result.data.data[0].number);
                     var a = new Date(result.data.data[0].creation_date * 1000);

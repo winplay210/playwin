@@ -20,7 +20,7 @@ const WinnerNumber=(props)=> {
   
   const onFinish = (values) => {
     console.log('Success:', values);
-    axios.post( "http://localhost:4001/winner", {
+    axios.post( "http://playwinbackend.herokuapp.com/winner", {
         number:values.number,
         date:values.date._d
     }).then(
