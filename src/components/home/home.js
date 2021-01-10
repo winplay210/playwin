@@ -39,8 +39,8 @@ const Home=()=>{
         </div>
         <div className={style.divStyles}>
           
-        <h4 className={style.SubTitle}>Today Winner of Dubai Lucky draw </h4>
-            <h1 className={style.Number}>{number?number:'0003456'}</h1>
+        <h4 className={style.SubTitle}>Khailo India Khailo </h4>
+            <h1 className={style.Number}>{number?number:'Loading..'}</h1>
             <h4 className={style.DateLabel}>{date? date: '08 January,2021'} <Divider type="vertical" /> {date? date: '4:47 PM'} </h4>
         </div>
 

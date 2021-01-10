@@ -23,6 +23,14 @@ const ChangePass=(props)=> {
 
   const onFinish = (values) => {
     console.log('Success:', values);
+    var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+
+    let isStrong=strongRegex.test(values.password);
+    if(!isStrong){
+      alert("Your password must include capital letter, number and a special character, There should be 8 characters");
+
+      return;
+    }
         if(values.password==values.confirm){
             axios.post( "http://localhost:4001/update", {
                 email:'admin',
@@ -45,6 +53,7 @@ const ChangePass=(props)=> {
             return
         }
   };
+  
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
