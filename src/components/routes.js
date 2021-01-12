@@ -5,7 +5,8 @@ import Login from "../components/login/login";
 import ListWinners from "../components/list/list"
 import Home from "../components/home/home"
 import Navbar from "../components/Navbar/navbar"
-import ChangePass from "../components/changePass/changePass"
+import ChangePass from "../components/changePass/changePass";
+import Winner from '../components/Winner/Container/Winner';
 
 import WinnerNumber from './winnerNumber/winnerNumber';
 import '../App.css';
@@ -63,6 +64,7 @@ const Routes = () => {
         <Route exact path='/' component={Home} />
         <Route exact path='/winnerList' component={ListWinners} />
         <Route exact path='/login/for/admin' component={Login} />
+        <Route exact path='/winner' component={Winner}/>
         <PrivateRoute exact path='/change'><ChangePass/></PrivateRoute>
         <PrivateRoute exact path='/Number'><WinnerNumber/></PrivateRoute>
        

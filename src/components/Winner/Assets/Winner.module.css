@@ -68,35 +68,3 @@ font-size: 26px;
     color: #737070;
     cursor: pointer;
 }
-
-
-
-@media only screen and (max-width:400px){
-    .calendarDiv{
-        width: 220px;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 3px;
-        border: 1px solid #dedede;
-        border-top: none;
-        margin-top: 5px;
-          
-    }
-}
-
-@media only screen and (min-width:401px){
-    .calendarDiv{
-        width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 3px;
-        border: 1px solid #dedede;
-        border-top: none;
-        margin-top: 5px;
-          
-    }
-}
-
-.brRight{
-    border-right:1px solid #efefef
-}

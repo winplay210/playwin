@@ -102,7 +102,7 @@ const ListWinners=()=>{
                   
                   <List.Item>
                     <List.Item.Meta
-                      title={<h4 href="https://ant.design">{item.number?item.number:'0003456'}</h4>}
+                      title={<h4 >{item.number?item.number:'0003456'}</h4>}
                       description={item.date?item.date:'09 January, 2020 | 4:49 PM' }
                     />
                   </List.Item>
