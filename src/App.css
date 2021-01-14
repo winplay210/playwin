@@ -149,3 +149,8 @@
   background: #fff;
   border-color: #6842bc !important;
 }
+.WinBtn{
+  float:right;
+  margin-right: 22px;
+  margin-top: 10px;
+}

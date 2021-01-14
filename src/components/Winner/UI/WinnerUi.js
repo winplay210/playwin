@@ -2,14 +2,12 @@ import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import mainImg from '../../home/assets/img/lucky.gif';
 import style from '../Assets/Winner.module.css';
-import moment from 'moment';
+import {Divider} from 'antd';
 const WinnerUi=(props)=>{
     
     let [number,setNumber]=useState(0),
     [date,setDate]=useState('');
 
-      
-  
     useEffect(()=>{
         axios.get('http://playwinbackend.herokuapp.com/history/'+0).then(result=>{
                 if(result){
@@ -37,12 +35,20 @@ const WinnerUi=(props)=>{
        <div className={style.Imgdiv}>
             <img className={style.ImgStyle} src={mainImg} alt='LuckyDraw'/>
         </div>
+        <Divider/>
         <div className={style.divStyles}>
-          
-          <h4 className={style.SubTitle}>India ni Pakistan Khailo</h4>
-              <h1 className={style.Number}>{number?number:'Loading..'}</h1>
-         
-              <h4 className={style.DateLabel}>{date? date: '08 January,2021'} </h4>
+        <span>
+          <h6 className={style.SubTitle}>India ni Pakistan Khailo</h6>
+              <label className={style.Number}>{number?number:'Loading..'}</label>
+              <h6 className={style.DateLabel}>{date? date: '08 January,2021'} </h6>
+</span>
+              <Divider/>
+
+              <span>
+              <h6 className={style.SubTitle}>Winner 2</h6>
+              <label className={style.Number}>{number?number:'Loading..'}</label>
+              <h6 className={style.DateLabel}>{date? date: '08 January,2021'} </h6>
+              </span>
           </div>
        </div>
         </div>

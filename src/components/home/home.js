@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
-import { Calendar, Alert} from 'antd';
+import { Calendar, Alert,Button} from 'antd';
 import moment from 'moment';
 import style from './assets/css/home.module.css';
 import mainImg from './assets/img/lucky.gif';
@@ -18,15 +18,15 @@ const Home=()=>{
 
     const onSelect =(value) => {
         selectedValue(value);
-        history.push('/winner');
-      
       };
     
       const onPanelChange = (moment) => {
         selectedValue(moment)
-     
       };
       
+      const onBtnClick=(moment)=>{
+        history.push('/winner');
+      }
   
     useEffect(()=>{
         axios.get('http://playwinbackend.herokuapp.com/history/'+0).then(result=>{
@@ -73,11 +73,16 @@ const Home=()=>{
        <div className='col-md-4'>
        <div className={style.calendarDiv}>       
            <Alert
-         message={`Select Date To See The Winner ${value && value.format('YYYY-MM-DD')}`}
+         message={`The Winners of: ${value && value.format('YYYY-MM-DD')}`}
             />
             <br/>
-     <Calendar value={value} onSelect={onSelect} onPanelChange={onPanelChange} fullscreen={false} />
+     <Calendar value={value} onSelect={onSelect} onPanelChange={onPanelChange} fullscreen={false}  />
           
+           </div>
+
+           <div className='WinBtn'>
+             <Button type='primary' onClick={onBtnClick}> See Winners </Button>
+
            </div>
        </div>
 

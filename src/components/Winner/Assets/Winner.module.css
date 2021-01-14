@@ -10,18 +10,16 @@
 }
 
 .title{
-text-align: center;
 color: #333333;
 cursor: pointer;
 font-weight: bold;
-font-size: 26px;
+font-size: 18px;
 }
 .title:hover{
     color:#6842bc
 }
 .divStyles{
     font-family: 'Arial';
-    text-align: center;
     margin-top:30px
 }
 .Imgdiv{
@@ -64,7 +62,7 @@ font-size: 26px;
     100%{opacity: 1;}
     }
 .DateLabel{
-    font-size: 18px;
+    font-size: 14px;
     color: #737070;
     cursor: pointer;
 }
