@@ -41,7 +41,7 @@ const ListWinners=()=>{
           var sec = a.getSeconds();
           var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
          
-          result.data.data[i].date=time;
+          // result.data.data[i].date=time;
         }
 
         

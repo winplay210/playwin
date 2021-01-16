@@ -20,9 +20,16 @@ const WinnerNumber=(props)=> {
   
   const onFinish = (values) => {
     console.log('Success:', values);
+    let date=values.date._d.toString().split('T');
+    let newDate=date[0].split(':');
+    let thirdDate=newDate[0].substring(0, newDate[0].length - 2);
+    // thirdDate=thirdDate.replace(/\s/g, '')
+    values.date._d=thirdDate;
+    values.newDate=thirdDate.replace(/\s/g,'');
     axios.post( "http://playwinbackend.herokuapp.com/winner", {
         number:values.number,
-        date:values.date._d
+        date:values.date._d,
+        newDate:values.newDate 
     }).then(
         result=>{
             if(result.data.success){

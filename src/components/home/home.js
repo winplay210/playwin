@@ -15,9 +15,14 @@ const Home=()=>{
     [date,setDate]=useState(''),
 
      [value,selectedValue]=useState(moment);
-
+  let [dateVal,setDateVal]=useState('');
     const onSelect =(value) => {
+        
+        let date=new Date(value.format("DD MMM YYYY"));
+        let newDate=date.toString().split(':');
+        let thirdDate=newDate[0].substring(0, newDate[0].length - 2);
         selectedValue(value);
+        setDateVal(thirdDate);
       };
     
       const onPanelChange = (moment) => {
@@ -25,24 +30,26 @@ const Home=()=>{
       };
       
       const onBtnClick=(moment)=>{
-        history.push('/winner');
+        console.log("moment",moment);
+       let val= dateVal.replace(/\s/g,'');
+        history.push(({pathname:"/winner",state:val}));
       }
   
     useEffect(()=>{
         axios.get('http://playwinbackend.herokuapp.com/history/'+0).then(result=>{
                 if(result){
                     setNumber(result.data.data[0].number);
-                    var a = new Date(result.data.data[0].creation_date * 1000);
-                    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-                    var year = a.getFullYear();
-                    var month = months[a.getMonth()];
-                    var date = a.getDate();
-                    var hour = a.getHours();
-                    var min = a.getMinutes();
-                    var sec = a.getSeconds();
-                    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+                    // var a = new Date(result.data.data[0].creation_date * 1000);
+                    // var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                    // var year = a.getFullYear();
+                    // var month = months[a.getMonth()];
+                    // var date = a.getDate();
+                    // var hour = a.getHours();
+                    // var min = a.getMinutes();
+                    // var sec = a.getSeconds();
+                    // var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
                    
-                    setDate(time);
+                    setDate(result.data.data[0].date);
                 }
         })
     },[])
