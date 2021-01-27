@@ -2,29 +2,12 @@ import React,{useEffect,useState} from 'react';
 import axios from 'axios';
 import { Button,Spin,List } from 'antd';
 
-const dataList = [
-  {
-    title: '0003456',
-  },
-  {
-    title: '0003456',
-  },
-  {
-    title: '0003456',
-  },
-  {
-    title: '0003456',
-  },
-  
-];
-
 const ListWinners=()=>{
 
   let [data,setData]=useState([]),
   [pageState,setPageState]=useState(0),
   [isLoading,setLoading]=useState(false);
    useEffect(()=>{
-
     setLoading(true)
     axios.get( "http://playwinbackend.herokuapp.com/history/"+0).then(result=>{
       if(result){
@@ -79,6 +62,7 @@ const ListWinners=()=>{
 
            }
       }
+      console.log(result.data.data,"Check check");
          setData(result.data.data);
          setLoading(false);
      
@@ -97,9 +81,6 @@ const ListWinners=()=>{
                 itemLayout="horizontal"
                 dataSource={data}
                 renderItem={item => (
-                  
-                  
-                  
                   <List.Item>
                     <List.Item.Meta
                       title={<h4 >{item.number?item.number:'0003456'}</h4>}

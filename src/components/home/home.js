@@ -72,8 +72,10 @@ const Home=()=>{
         <div className={style.divStyles}>
           
           <h4 className={style.SubTitle}>Khailo India Khailo </h4>
+          <h6 className={style.SubTitle}>The Result is announced at 9:00 PM</h6>
+
               <h1 className={style.Number}>{number?number:'Loading..'}</h1>
-              <h4 className={style.DateLabel}>{date? date: '08 January,2021'}  </h4>
+              <h4 className={style.DateLabel}>{date? date: 'Loading..'}  </h4>
           </div>
        </div>
 

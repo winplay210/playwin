@@ -56,6 +56,7 @@ const WinnerUi=(props)=>{
         <div className={style.divStyles}>
         <span>
           <h6 className={style.SubTitle}>khailo india Khailo</h6>
+          <h6 className={style.SubTitle}>The Result is announced at 9:00 PM</h6>
               <label className={style.Number}>{winner.length>0&&winner[0].number?winner[0].number:'Loading..'}</label>
               <h6 className={style.DateLabel}>{winner.length>0&&winner[0].date? winner[0].date: 'Loading'} </h6>
 </span>

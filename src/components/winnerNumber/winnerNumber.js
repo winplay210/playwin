@@ -18,15 +18,21 @@ const WinnerNumber=(props)=> {
   };
 
   
-  const onFinish = (values) => {
+  const onFinish = async (values) => {
     console.log('Success:', values);
-    let date=values.date._d.toString().split('T');
+    let date=values.date._d.toString().split('T ');
+
+    console.log("Spak khwi",date);
     let newDate=date[0].split(':');
     let thirdDate=newDate[0].substring(0, newDate[0].length - 2);
     // thirdDate=thirdDate.replace(/\s/g, '')
     values.date._d=thirdDate;
     values.newDate=thirdDate.replace(/\s/g,'');
-    axios.post( "http://playwinbackend.herokuapp.com/winner", {
+
+    console.log("here is 1",values.number);
+    console.log("here is 2",values.date._d);
+    console.log("here is 3",values.newDate);
+    await axios.post( "http://playwinbackend.herokuapp.com/winner", {
         number:values.number,
         date:values.date._d,
         newDate:values.newDate 
