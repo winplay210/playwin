@@ -13,19 +13,19 @@ const ListWinners=()=>{
       if(result){
         setLoading(false);
         setPageState(result.data.data.length);
-        for (let i=0;i<result.data.data.length;i++){
-          var a = new Date(result.data.data[i].creation_date * 1000);
-          var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-          var year = a.getFullYear();
-          var month = months[a.getMonth()];
-          var date = a.getDate();
-          var hour = a.getHours();
-          var min = a.getMinutes();
-          var sec = a.getSeconds();
-          var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+        // for (let i=0;i<result.data.data.length;i++){
+        //   var a = new Date(result.data.data[i].creation_date * 1000);
+        //   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        //   var year = a.getFullYear();
+        //   var month = months[a.getMonth()];
+        //   var date = a.getDate();
+        //   var hour = a.getHours();
+        //   var min = a.getMinutes();
+        //   var sec = a.getSeconds();
+        //   var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
          
-          // result.data.data[i].date=time;
-        }
+        //   // result.data.data[i].date=time;
+        // }
 
         
         setData(result.data.data);
@@ -47,20 +47,20 @@ const ListWinners=()=>{
           setLoading(false);
         }else{
         setPageState(pageState+result.data.data.length)
-        for (let i=0;i<result.data.data.length;i++){
-          var a = new Date(result.data.data[i].creation_date * 1000);
-          var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-          var year = a.getFullYear();
-          var month = months[a.getMonth()];
-          var date = a.getDate();
-          var hour = a.getHours();
-          var min = a.getMinutes();
-          var sec = a.getSeconds();
-          var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+        // for (let i=0;i<result.data.data.length;i++){
+        //   var a = new Date(result.data.data[i].creation_date * 1000);
+        //   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        //   var year = a.getFullYear();
+        //   var month = months[a.getMonth()];
+        //   var date = a.getDate();
+        //   var hour = a.getHours();
+        //   var min = a.getMinutes();
+        //   var sec = a.getSeconds();
+        //   var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
          
-          result.data.data[i].date=time;
+        //   result.data.data[i].date=time;
 
-           }
+        //    }
       }
       console.log(result.data.data,"Check check");
          setData(result.data.data);
